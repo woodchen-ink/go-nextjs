@@ -1,0 +1,6 @@
+database.db
+.env
+.cursor
+
+node_modules
+

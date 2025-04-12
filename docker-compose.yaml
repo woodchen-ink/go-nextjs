@@ -1,0 +1,21 @@
+services:
+  go-nextjs:
+    image: woodchen/go-nextjs:latest
+    container_name: go-nextjs
+    restart: always
+    user: root
+    ports:
+      - "1009:3000"
+      - "1010:8080"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - NODE_ENV=production
+      - GIN_MODE=release
+      - PORT=8080
+      - NEXT_PORT=3000
+      - DATA_DIR=/app/data
+      - CZL_CLIENT_ID=client_52xxx69
+      - CZL_CLIENT_SECRET=a6d973xxx7d19f9517
+      - JWT_SECRET=secure_jwt_secret_key_2024
+      - SYSTEM_URL=https://go-nextjs.czl.net
